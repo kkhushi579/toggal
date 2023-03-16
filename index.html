@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://code.jquery.com/jquery-3.6.3.js" integrity="sha256-nQLuAZGRRcILA+6dMBOvcRh5Pe310sBpanc6+QBmyVM=" crossorigin="anonymous"></script>
+    <style>
+        div{
+            background-color: orangered; height: 100px; width: 100px; border: 1px solid black;
+        }
+        .circle{
+            border-radius: 50%;
+        }
+        .blue{
+            background-color: blue;
+        }
+        
+    </style>
+</head>
+<body>
+    <p>To add or remove class</p>
+    <div></div>
+   <br><br> <button class="btn1">To add class</button>
+    <button class="btn2">To remove class</button>
+    <button class="btn3">To toggle class</button>
+    <button class="btn4">To show value of attribute in alert</button>
+    <button class="btn5">To add attribute in p</button>
+
+    <script>
+        // To get data from the given selector
+        var j = $.noConflict();
+        
+        j(".btn1").click(function (){
+            j("div").addClass("blue circle")
+        })
+
+        j(".btn2").click(function (){
+            j("div").removeClass("blue")
+        })
+
+        j(".btn3").click(function (){
+            j("div").toggleClass("circle")
+        })
+
+        j(".btn4").click(function (){
+            var r = j(".inp").attr("placeholder")
+            alert(r)
+        })
+
+        j(".btn5").click(function (){
+            j("p").attr(   {"class":"para",  "id":"hello"}   )
+        })
+        
+        
+    </script>
+</body>
+
+</html>
+
